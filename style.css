@@ -1,17 +1,73 @@
-html, body {
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Autour+One&family=DM+Serif+Text:ital@0;1&display=swap');
+
+/* Apply a smooth background gradient */
+body {
   margin: 0;
   padding: 0;
-}
-
-canvas {
-  display: block;
-}
-
-body {
-  /* specify height dimension for vertical alignment with flex */
   height: 100vh;
-  /* alignment */
   display: flex;
   justify-content: center;
   align-items: center;
- }
+  flex-direction: column;
+  background: linear-gradient(45deg, #e9e0e5, #e69ec5, #d378b8);
+  background-size: 300% 300%;
+  animation: gradientShift 6s ease infinite;
+  font-family: 'Abril FatFace', sans-serif; /* Smooth, modern font */
+  color: #36454F; /* Dark text for better readability */
+  text-align: center; /* Center-align the text */
+}
+
+/* Gradient animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Style for headings */
+h1, h2 {
+  margin: 0;
+  padding: 10px;
+  text-shadow: 2px 2px 4px rgba(73, 71, 71, 0.5); /* Subtle text shadow */
+}
+
+/* Style for h1 - larger, more impactful */
+h1 {
+  font-size: 60px;
+  font-weight: 700;
+  color: #ccaeda; /* Dark pink */
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+/* Style for h2 - smaller but still prominent */
+h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #ccaeda; /* Soft pink */
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+/* Style the canvas */
+canvas {
+  display: block;
+  border-radius: 10px;
+  border: 8px solid white; /* White border */
+  box-shadow: 
+    0 0 10px 4px rgba(193, 121, 226, 0.76),    /* Soft outer shadow */
+    0 0 20px 4px rgba(162, 65, 130, 0.6), /* Light purple glow */
+    0 0 30px 6px rgba(242, 179, 214, 0.8); /* Soft pink glow */
+}
+
+/* Hover effect on canvas */
+canvas:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
