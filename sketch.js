@@ -1,20 +1,22 @@
-// Define the grid spacing
+// Define the Grid Spacing Which Determines how Large Each Square is
 let grid = 20;
 
 function setup() {
-  createCanvas(600, 600); // Set a fixed size for the canvas
-  noStroke();
+  // Set a Fixed Canvas Size for the Artwork
+  createCanvas(600, 600); 
+ 
+  strokeWeight(0.1);
 }
 
 function draw() {
-  // Clear the screen
+  // Clear the Screen Every Frame to Avoid Overlapping Shapes
   background(255);
 
-  // Loop through X & Y positions
+  // Loop Through X and Y Positions to Create the Grid
   for (let x = -1; x < width / grid; x++) {
     for (let y = -1; y < height / grid; y++) {
 
-      // Randomize color
+      // Randomly Generates
       let r = random(180, 255);
       let g = random(50, 150);
       let b = random(100, 180);
