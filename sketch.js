@@ -6,6 +6,7 @@ function setup() {
   createCanvas(600, 600);
 
   strokeWeight(0.1);
+  
 }
 
 function draw() {
@@ -13,8 +14,8 @@ function draw() {
   background(255);
 
   // Loop Through X and Y Positions to Create the Grid
-  for (let x = -1; x < width / grid; x++) {
-    for (let y = -1; y < height / grid; y++) {
+  for (let x = 0; x < width / grid; x++) {
+    for (let y = 0; y < height / grid; y++) {
 
       // Randomly Generates RGB Values to Create Colourful Squares
       let r = random(180, 255);

@@ -69,7 +69,7 @@ h2 {
 canvas {
   display: block;
   border-radius: 10px;
-  border: 8px solid white;
+  border: 5px solid white;
   box-shadow:
     /* Outer Glow Effect */
     0 0 10px 4px rgba(193, 121, 226, 0.76),
